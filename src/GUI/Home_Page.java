@@ -137,7 +137,7 @@ public class Home_Page extends javax.swing.JFrame {
         btnDeleteAppoinment.setBackground(new java.awt.Color(0, 153, 153));
         btnDeleteAppoinment.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnDeleteAppoinment.setForeground(new java.awt.Color(255, 255, 255));
-        btnDeleteAppoinment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/del_app.png"))); // NOI18N
+        btnDeleteAppoinment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/del_app-wobg.png"))); // NOI18N
         btnDeleteAppoinment.setText("Delete Appointment");
         btnDeleteAppoinment.setToolTipText("");
         btnDeleteAppoinment.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -152,7 +152,7 @@ public class Home_Page extends javax.swing.JFrame {
         btnBookAppoinment.setBackground(new java.awt.Color(0, 153, 153));
         btnBookAppoinment.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnBookAppoinment.setForeground(new java.awt.Color(255, 255, 255));
-        btnBookAppoinment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add_app.png"))); // NOI18N
+        btnBookAppoinment.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/add_app-wobg.png"))); // NOI18N
         btnBookAppoinment.setText("Book Appointment");
         btnBookAppoinment.setToolTipText("");
         btnBookAppoinment.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -167,7 +167,7 @@ public class Home_Page extends javax.swing.JFrame {
         btnUpdateAppoinment1.setBackground(new java.awt.Color(0, 153, 153));
         btnUpdateAppoinment1.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
         btnUpdateAppoinment1.setForeground(new java.awt.Color(255, 255, 255));
-        btnUpdateAppoinment1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_app.png"))); // NOI18N
+        btnUpdateAppoinment1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/edit_app-wobg.png"))); // NOI18N
         btnUpdateAppoinment1.setText("Update Appointment");
         btnUpdateAppoinment1.setToolTipText("");
         btnUpdateAppoinment1.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
@@ -707,7 +707,7 @@ public class Home_Page extends javax.swing.JFrame {
             Appoinment_Details updateAppoinment = new Appoinment_Details(currDataRow, selectedRowIndex, "Update_Booking", appID);
             updateAppoinment.setVisible(true);
             updateAppoinment.setLocationRelativeTo(null);
-            updateAppoinment.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
+            updateAppoinment.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
         } 
     }//GEN-LAST:event_btnUpdateAppoinment1ActionPerformed
 
@@ -822,7 +822,13 @@ public class Home_Page extends javax.swing.JFrame {
                     break;    
             }
         }
- 
+        //When action type is "Update_Booking".
+        else if(actionType.equals("Update_Booking")){
+            
+            for (int i=0; i<dataRow.length; i++){
+                allAppoinmentsTableModel.setValueAt(dataRow[i], rowIndex, (i+3));
+            }
+        }
     }
     
     /**

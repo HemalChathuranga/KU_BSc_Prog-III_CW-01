@@ -392,6 +392,7 @@
         </Component>
         <Component class="javax.swing.JTextField" name="txtEmail">
           <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="txtEmailActionPerformed"/>
             <EventHandler event="keyReleased" listener="java.awt.event.KeyListener" parameters="java.awt.event.KeyEvent" handler="txtEmailKeyReleased"/>
           </Events>
         </Component>
@@ -517,11 +518,13 @@
         <Component class="javax.swing.JComboBox" name="cmbTreatment">
           <Properties>
             <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
-              <StringArray count="4">
-                <StringItem index="0" value="Item 1"/>
-                <StringItem index="1" value="Item 2"/>
-                <StringItem index="2" value="Item 3"/>
-                <StringItem index="3" value="Item 4"/>
+              <StringArray count="6">
+                <StringItem index="0" value="Select Treatment"/>
+                <StringItem index="1" value="Cleaning"/>
+                <StringItem index="2" value="Whitening"/>
+                <StringItem index="3" value="Filling"/>
+                <StringItem index="4" value="Nerve Filling"/>
+                <StringItem index="5" value="Root Canal Therapy"/>
               </StringArray>
             </Property>
           </Properties>
@@ -591,6 +594,9 @@
             <Property name="text" type="java.lang.String" value="Cancel"/>
             <Property name="focusable" type="boolean" value="false"/>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnCancelActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="btnUpdate">
           <Properties>

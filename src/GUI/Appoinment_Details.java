@@ -224,6 +224,11 @@ public class Appoinment_Details extends javax.swing.JFrame {
         jLabel10.setText(" Email :");
         jLabel10.setToolTipText("");
 
+        txtEmail.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                txtEmailActionPerformed(evt);
+            }
+        });
         txtEmail.addKeyListener(new java.awt.event.KeyAdapter() {
             public void keyReleased(java.awt.event.KeyEvent evt) {
                 txtEmailKeyReleased(evt);
@@ -357,7 +362,7 @@ public class Appoinment_Details extends javax.swing.JFrame {
         jLabel14.setText("Treatment :");
         jLabel14.setToolTipText("");
 
-        cmbTreatment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        cmbTreatment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Treatment", "Cleaning", "Whitening", "Filling", "Nerve Filling", "Root Canal Therapy" }));
 
         jLabel16.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel16.setText("Status :");
@@ -394,6 +399,11 @@ public class Appoinment_Details extends javax.swing.JFrame {
 
         btnCancel.setText("Cancel");
         btnCancel.setFocusable(false);
+        btnCancel.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnCancelActionPerformed(evt);
+            }
+        });
 
         btnUpdate.setText("Update");
         btnUpdate.setFocusable(false);
@@ -661,14 +671,28 @@ public class Appoinment_Details extends javax.swing.JFrame {
         applicationDetails[10] = cmbTreatment.getSelectedItem().toString();
         applicationDetails[11] = cmbStatus.getSelectedItem().toString();
         
+        //Validation to check that all the fileds labeled with * are filled
+        if(applicationDetails[0].equals("") || applicationDetails[1].equals("")|| applicationDetails[2].equals("")|| applicationDetails[3].equals("")|| applicationDetails[4].equals("")|| applicationDetails[6].equals("") || applicationDetails[9].equals("Select Doc.")){
+            JOptionPane.showMessageDialog(this, "Please fill all the fileds labeled with *", "Booking Error", ERROR_MESSAGE);
+        }
+        else{
         Home_Page.addDataRowtoMainTable(selectedIndexforbook, applicationDetails, actionType);
         this.dispose();
+        }
         
     }//GEN-LAST:event_btnUpdateActionPerformed
 
     private void txtMobNumActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtMobNumActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_txtMobNumActionPerformed
+
+    private void txtEmailActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_txtEmailActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_txtEmailActionPerformed
+
+    private void btnCancelActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnCancelActionPerformed
+        this.dispose();
+    }//GEN-LAST:event_btnCancelActionPerformed
 
     /**
      * @param args the command line arguments
