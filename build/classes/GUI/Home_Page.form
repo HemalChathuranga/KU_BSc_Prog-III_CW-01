@@ -114,7 +114,7 @@
         <Component class="javax.swing.JLabel" name="jLabel8">
           <Properties>
             <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="99" type="rgb"/>
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="text" type="java.lang.String" value="Logged In as:"/>
           </Properties>
@@ -134,6 +134,7 @@
                       <Component id="btnDeleteAppoinment" alignment="0" max="32767" attributes="0"/>
                       <Component id="btnUpdateAppoinment1" alignment="1" max="32767" attributes="0"/>
                       <Component id="btnBookAppoinment" alignment="0" max="32767" attributes="0"/>
+                      <Component id="btnPrintBill" alignment="1" max="32767" attributes="0"/>
                   </Group>
                   <EmptySpace max="-2" attributes="0"/>
               </Group>
@@ -147,6 +148,8 @@
                   <Component id="btnUpdateAppoinment1" min="-2" pref="52" max="-2" attributes="0"/>
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="btnDeleteAppoinment" min="-2" pref="51" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
+                  <Component id="btnPrintBill" min="-2" pref="51" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
               </Group>
           </Group>
@@ -229,6 +232,32 @@
           </Properties>
           <Events>
             <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnUpdateAppoinment1ActionPerformed"/>
+          </Events>
+        </Component>
+        <Component class="javax.swing.JButton" name="btnPrintBill">
+          <Properties>
+            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="99" green="99" red="0" type="rgb"/>
+            </Property>
+            <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
+              <Font name="Calibri" size="14" style="1"/>
+            </Property>
+            <Property name="foreground" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+              <Color blue="ff" green="ff" red="ff" type="rgb"/>
+            </Property>
+            <Property name="icon" type="javax.swing.Icon" editor="org.netbeans.modules.form.editors2.IconEditor">
+              <Image iconType="3" name="/Images/bill_wobg.png"/>
+            </Property>
+            <Property name="text" type="java.lang.String" value="      View Bill"/>
+            <Property name="toolTipText" type="java.lang.String" value=""/>
+            <Property name="cursor" type="java.awt.Cursor" editor="org.netbeans.modules.form.editors2.CursorEditor">
+              <Color id="Default Cursor"/>
+            </Property>
+            <Property name="focusPainted" type="boolean" value="false"/>
+            <Property name="horizontalAlignment" type="int" value="2"/>
+          </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="btnPrintBillActionPerformed"/>
           </Events>
         </Component>
       </SubComponents>
@@ -753,7 +782,7 @@
                             <Column editable="false" title="Title" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Mr."/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -795,28 +824,21 @@
                             <Column editable="false" title="First Name" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Hemal"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Chathu"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Hasani"/>
-                              <Data value="null"/>
-                              <Data value="null"/>
-                              <Data value="null"/>
-                              <Data value="null"/>
-                              <Data value="null"/>
-                              <Data value="null"/>
-                              <Data value="null"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -825,7 +847,14 @@
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Sasrika"/>
+                              <Data value="null"/>
+                              <Data value="null"/>
+                              <Data value="null"/>
+                              <Data value="null"/>
+                              <Data value="null"/>
+                              <Data value="null"/>
+                              <Data value="null"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -837,7 +866,7 @@
                             <Column editable="false" title="Last Name" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Chath"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -879,7 +908,7 @@
                             <Column editable="false" title="Age" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="32"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -921,7 +950,7 @@
                             <Column editable="false" title="Mobile Num." type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="0713518813"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -963,7 +992,7 @@
                             <Column editable="false" title="Email" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="defedve@gmail.com"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -1005,7 +1034,7 @@
                             <Column editable="false" title="Address" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Kottawa"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -1048,7 +1077,7 @@
                             <Column editable="false" title="App. Fee" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="1000"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -1090,7 +1119,7 @@
                             <Column editable="false" title="Doc. Name" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Dr. A.D. Ranasinghe"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -1132,7 +1161,7 @@
                             <Column editable="false" title="Treatment" type="java.lang.String">
                               <Data value="null"/>
                               <Data value="null"/>
-                              <Data value="Item 1"/>
+                              <Data value=""/>
                               <Data value="null"/>
                               <Data value="null"/>
                               <Data value="null"/>
@@ -1174,21 +1203,6 @@
                             <Column editable="false" title="Status" type="java.lang.String">
                               <Data value="Available"/>
                               <Data value="Available"/>
-                              <Data value="Booked"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Completed"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Available"/>
-                              <Data value="Booked"/>
                               <Data value="Available"/>
                               <Data value="Available"/>
                               <Data value="Available"/>
@@ -1204,7 +1218,22 @@
                               <Data value="Available"/>
                               <Data value="Available"/>
                               <Data value="Available"/>
-                              <Data value="Completed"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
+                              <Data value="Available"/>
                               <Data value="Available"/>
                               <Data value="Available"/>
                               <Data value="Available"/>

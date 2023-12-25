@@ -17,7 +17,7 @@ import javax.swing.JTable;
 public class Appoinment_Details extends javax.swing.JFrame {
 
     JTable mainTableCopy;
-    int selectedIndexforbook = 0;
+    int selectedIndexforbook = -1;
     String actionType;
     
     public Appoinment_Details(){
@@ -140,7 +140,10 @@ public class Appoinment_Details extends javax.swing.JFrame {
         btnBook = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("Appoinment Details");
+        setBackground(new java.awt.Color(255, 255, 255));
 
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 24)); // NOI18N
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         jLabel1.setText("Appoinment Details Form");
@@ -174,9 +177,12 @@ public class Appoinment_Details extends javax.swing.JFrame {
         lblAppID.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         lblAppID.setToolTipText("");
 
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+
         jLabel5.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel5.setText("*Title :");
 
+        cmbTitle.setBackground(new java.awt.Color(255, 255, 255));
         cmbTitle.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Title", "Rev.", "Mr.", "Ms." }));
         cmbTitle.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -247,6 +253,7 @@ public class Appoinment_Details extends javax.swing.JFrame {
         jLabel13.setText(" *Doc. Name :");
         jLabel13.setToolTipText("");
 
+        cmbDocName.setBackground(new java.awt.Color(255, 255, 255));
         cmbDocName.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Doc.", "Dr. A.D. Ranasinghe" }));
 
         jLabel15.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
@@ -356,19 +363,22 @@ public class Appoinment_Details extends javax.swing.JFrame {
                 .addGap(22, 22, 22))
         );
 
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
         jPanel2.setBorder(javax.swing.BorderFactory.createTitledBorder(null, "Post Treatment", javax.swing.border.TitledBorder.DEFAULT_JUSTIFICATION, javax.swing.border.TitledBorder.DEFAULT_POSITION, new java.awt.Font("Dialog", 1, 12))); // NOI18N
 
         jLabel14.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel14.setText("Treatment :");
         jLabel14.setToolTipText("");
 
+        cmbTreatment.setBackground(new java.awt.Color(255, 255, 255));
         cmbTreatment.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Select Treatment", "Cleaning", "Whitening", "Filling", "Nerve Filling", "Root Canal Therapy" }));
 
         jLabel16.setFont(new java.awt.Font("Dialog", 0, 12)); // NOI18N
         jLabel16.setText("Status :");
         jLabel16.setToolTipText("");
 
-        cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Status", "Booked", "Paid", "Completed" }));
+        cmbStatus.setBackground(new java.awt.Color(255, 255, 255));
+        cmbStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Status", "Booked", "Treatment Completed", "Completed" }));
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -397,6 +407,9 @@ public class Appoinment_Details extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
+        btnCancel.setBackground(new java.awt.Color(0, 153, 153));
+        btnCancel.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        btnCancel.setForeground(new java.awt.Color(255, 255, 255));
         btnCancel.setText("Cancel");
         btnCancel.setFocusable(false);
         btnCancel.addActionListener(new java.awt.event.ActionListener() {
@@ -405,6 +418,9 @@ public class Appoinment_Details extends javax.swing.JFrame {
             }
         });
 
+        btnUpdate.setBackground(new java.awt.Color(0, 153, 153));
+        btnUpdate.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        btnUpdate.setForeground(new java.awt.Color(255, 255, 255));
         btnUpdate.setText("Update");
         btnUpdate.setFocusable(false);
         btnUpdate.addActionListener(new java.awt.event.ActionListener() {
@@ -413,6 +429,9 @@ public class Appoinment_Details extends javax.swing.JFrame {
             }
         });
 
+        btnBook.setBackground(new java.awt.Color(0, 153, 153));
+        btnBook.setFont(new java.awt.Font("Calibri", 1, 12)); // NOI18N
+        btnBook.setForeground(new java.awt.Color(255, 255, 255));
         btnBook.setText("Book");
         btnBook.setFocusable(false);
         btnBook.addActionListener(new java.awt.event.ActionListener() {
@@ -437,11 +456,11 @@ public class Appoinment_Details extends javax.swing.JFrame {
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel3Layout.createSequentialGroup()
-                .addContainerGap(21, Short.MAX_VALUE)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(btnCancel)
-                    .addComponent(btnUpdate)
-                    .addComponent(btnBook))
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(btnBook, javax.swing.GroupLayout.DEFAULT_SIZE, 34, Short.MAX_VALUE)
+                    .addComponent(btnUpdate, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnCancel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addGap(26, 26, 26))
         );
 
@@ -581,6 +600,10 @@ public class Appoinment_Details extends javax.swing.JFrame {
         else if(applicationDetails[0].equals("") || applicationDetails[1].equals("")|| applicationDetails[2].equals("")|| applicationDetails[3].equals("")|| applicationDetails[4].equals("")|| applicationDetails[6].equals("") || applicationDetails[9].equals("Select Doc.")){
             JOptionPane.showMessageDialog(this, "Please fill all the fileds labeled with *", "Booking Error", ERROR_MESSAGE);
         }
+        //Validation to check whether the mob num format is correct
+        else if(lblMobNumError.getText().equals("Mobile Number Invalid")){
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Mobile Number", "Booking Error", ERROR_MESSAGE);
+        }
         else{
         Home_Page.addDataRowtoMainTable(selectedIndexforbook, applicationDetails, actionType);
         this.dispose();
@@ -674,6 +697,10 @@ public class Appoinment_Details extends javax.swing.JFrame {
         //Validation to check that all the fileds labeled with * are filled
         if(applicationDetails[0].equals("") || applicationDetails[1].equals("")|| applicationDetails[2].equals("")|| applicationDetails[3].equals("")|| applicationDetails[4].equals("")|| applicationDetails[6].equals("") || applicationDetails[9].equals("Select Doc.")){
             JOptionPane.showMessageDialog(this, "Please fill all the fileds labeled with *", "Booking Error", ERROR_MESSAGE);
+        }
+        //Validation to check whether the mob num format is correct
+        else if(lblMobNumError.getText().equals("Mobile Number Invalid")){
+            JOptionPane.showMessageDialog(this, "Please Enter Valid Mobile Number", "Booking Error", ERROR_MESSAGE);
         }
         else{
         Home_Page.addDataRowtoMainTable(selectedIndexforbook, applicationDetails, actionType);

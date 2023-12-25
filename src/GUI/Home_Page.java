@@ -4,6 +4,7 @@
  */
 package GUI;
 
+import Tooth_Care_Appoinment_Management_System.Patient;
 import java.awt.Toolkit;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -71,6 +72,7 @@ public class Home_Page extends javax.swing.JFrame {
         btnDeleteAppoinment = new javax.swing.JButton();
         btnBookAppoinment = new javax.swing.JButton();
         btnUpdateAppoinment1 = new javax.swing.JButton();
+        btnPrintBill = new javax.swing.JButton();
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -104,7 +106,7 @@ public class Home_Page extends javax.swing.JFrame {
         jLabel7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/Home_P_1.jpg"))); // NOI18N
         jLabel7.setText("jLabel7");
 
-        jLabel8.setForeground(new java.awt.Color(153, 153, 153));
+        jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Logged In as:");
 
         javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
@@ -179,6 +181,21 @@ public class Home_Page extends javax.swing.JFrame {
             }
         });
 
+        btnPrintBill.setBackground(new java.awt.Color(0, 153, 153));
+        btnPrintBill.setFont(new java.awt.Font("Calibri", 1, 14)); // NOI18N
+        btnPrintBill.setForeground(new java.awt.Color(255, 255, 255));
+        btnPrintBill.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Images/bill_wobg.png"))); // NOI18N
+        btnPrintBill.setText("      View Bill");
+        btnPrintBill.setToolTipText("");
+        btnPrintBill.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
+        btnPrintBill.setFocusPainted(false);
+        btnPrintBill.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnPrintBill.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPrintBillActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
@@ -188,7 +205,8 @@ public class Home_Page extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(btnDeleteAppoinment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnUpdateAppoinment1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(btnBookAppoinment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(btnBookAppoinment, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(btnPrintBill, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         jPanel1Layout.setVerticalGroup(
@@ -199,6 +217,8 @@ public class Home_Page extends javax.swing.JFrame {
                 .addComponent(btnUpdateAppoinment1, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(btnDeleteAppoinment, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(btnPrintBill, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
@@ -359,21 +379,21 @@ public class Home_Page extends javax.swing.JFrame {
             new Object [][] {
                 {"Monday", "6:00pm - 6:30pm", "Mon01", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Monday", "6:30pm - 7:00pm", "Mon02", null, null, null, null, null, null, null, null, null, null, null, "Available"},
-                {"Monday", "7:00pm - 7:30pm", "Mon03", "Mr.", "Hemal", "Chath", "32", "0713518813", "defedve@gmail.com", "Kottawa", null, "1000", "Dr. A.D. Ranasinghe", "Item 1", "Booked"},
+                {"Monday", "7:00pm - 7:30pm", "Mon03", "", "", "", "", "", "", "", null, "", "", "", "Available"},
                 {"Monday", "7:30pm - 8:00pm", "Mon04", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Monday", "8:00pm - 8:30pm", "Mon05", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Monday", "8:30pm - 9:00pm", "Mon06", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Wednesday", "6:00pm - 6:30pm", "Wed01", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Wednesday", "6:30pm - 7:00pm", "Wed02", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Wednesday", "7:00pm - 7:30pm", "Wed03", null, null, null, null, null, null, null, null, null, null, null, "Available"},
-                {"Wednesday", "7:30pm - 8:00pm", "Wed04", null, "Chathu", null, null, null, null, null, null, null, null, null, "Completed"},
+                {"Wednesday", "7:30pm - 8:00pm", "Wed04", null, "", null, null, null, null, null, null, null, null, null, "Available"},
                 {"Wednesday", "8:00pm - 8:30pm", "Wed05", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Wednesday", "8:30pm - 9:00pm", "Wed06", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "3:00pm - 3:30pm", "Sat01", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "3:30pm - 4:00pm", "Sat02", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "4:00pm - 4:30pm", "Sat03", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "4:30pm - 5:00pm", "Sat04", null, null, null, null, null, null, null, null, null, null, null, "Available"},
-                {"Saturday", "5:00pm - 5:30pm", "Sat05", null, "Hasani", null, null, null, null, null, null, null, null, null, "Booked"},
+                {"Saturday", "5:00pm - 5:30pm", "Sat05", null, "", null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "5:30pm - 6:00pm", "Sat06", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "6:00pm - 6:30pm", "Sat07", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Saturday", "6:30pm - 7:00pm", "Sat08", null, null, null, null, null, null, null, null, null, null, null, "Available"},
@@ -389,7 +409,7 @@ public class Home_Page extends javax.swing.JFrame {
                 {"Sunday", "4:30pm - 5:00pm", "Sun04", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Sunday", "5:00pm - 5:30pm", "Sun05", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Sunday", "5:30pm - 6:00pm", "Sun06", null, null, null, null, null, null, null, null, null, null, null, "Available"},
-                {"Sunday", "6:00pm - 6:30pm", "Sun07", null, "Sasrika", null, null, null, null, null, null, null, null, null, "Completed"},
+                {"Sunday", "6:00pm - 6:30pm", "Sun07", null, "", null, null, null, null, null, null, null, null, null, "Available"},
                 {"Sunday", "6:30pm - 7:00pm", "Sun08", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Sunday", "7:00pm - 7:30pm", "Sun09", null, null, null, null, null, null, null, null, null, null, null, "Available"},
                 {"Sunday", "7:30pm - 8:00pm", "Sun10", null, null, null, null, null, null, null, null, null, null, null, "Available"},
@@ -711,7 +731,44 @@ public class Home_Page extends javax.swing.JFrame {
         } 
     }//GEN-LAST:event_btnUpdateAppoinment1ActionPerformed
 
-    
+    private void btnPrintBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintBillActionPerformed
+            
+        
+        int selectedRowIndex = tblAllAppoinments.getSelectedRow();
+        
+        if(selectedRowIndex == -1){
+            JOptionPane.showMessageDialog(this, "Please Select the record you need to Bill.", "Appoinment Billing Error", ERROR_MESSAGE);
+        }
+        else if(tblAllAppoinments.getValueAt(selectedRowIndex, 14).equals("Available")){
+            JOptionPane.showMessageDialog(this, "Selected time slot doesn't have a booking yet.", "Appoinment Billing Error", ERROR_MESSAGE);
+        }
+        else if((tblAllAppoinments.getValueAt(selectedRowIndex, 13).equals("Select Treatment")) || !((tblAllAppoinments.getValueAt(selectedRowIndex, 14).equals("Treatment Completed")) || (tblAllAppoinments.getValueAt(selectedRowIndex, 14).equals("Completed")))){
+            JOptionPane.showMessageDialog(this, "Selected time slot doesn't ready for Billing.\nPlease update the record if the treatment completed", "Appoinment Update Error", ERROR_MESSAGE);
+        }
+        else{
+            
+            Patient patientBillDet = new Patient(); 
+            
+            patientBillDet.appID = tblAllAppoinments.getValueAt(selectedRowIndex, 2).toString();
+            patientBillDet.title = tblAllAppoinments.getValueAt(selectedRowIndex, 3).toString();
+            patientBillDet.firstName = tblAllAppoinments.getValueAt(selectedRowIndex, 4).toString();
+            patientBillDet.lastName = tblAllAppoinments.getValueAt(selectedRowIndex, 5).toString();
+            patientBillDet.age = tblAllAppoinments.getValueAt(selectedRowIndex, 6).toString();
+            patientBillDet.docName = tblAllAppoinments.getValueAt(selectedRowIndex, 12).toString();
+            patientBillDet.treatment = tblAllAppoinments.getValueAt(selectedRowIndex, 13).toString();
+            patientBillDet.appFee = tblAllAppoinments.getValueAt(selectedRowIndex, 11).toString();
+            
+            
+            //Create Invoice object with patient details
+            Invoice currInvoice = new Invoice(patientBillDet, selectedRowIndex);
+            
+            currInvoice.setVisible(true);
+            currInvoice.setLocationRelativeTo(null);
+            currInvoice.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE); 
+        }
+             
+    }//GEN-LAST:event_btnPrintBillActionPerformed
+ 
     //Method to use when a filter required on the Main appoinments table.
     private void appointmentTableFilter(String fltrText, int fltrColumn){
         
@@ -831,6 +888,15 @@ public class Home_Page extends javax.swing.JFrame {
         }
     }
     
+    public static void addCompleteActionToMainTable(int rowIndex){
+        
+        //Adding data into the perticular row of main appoinments table
+        DefaultTableModel allAppoinmentsTableModel = (DefaultTableModel) tblAllAppoinments.getModel();
+    
+        allAppoinmentsTableModel.setValueAt("Completed", rowIndex, 14);
+    
+    }
+    
     /**
      * @param args the command line arguments
      */
@@ -869,6 +935,7 @@ public class Home_Page extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton btnBookAppoinment;
     private javax.swing.JButton btnDeleteAppoinment;
+    private javax.swing.JButton btnPrintBill;
     private javax.swing.JButton btnUpdateAppoinment1;
     private javax.swing.JComboBox<String> cmbAppStatus;
     private javax.swing.JComboBox<String> cmbDate;
