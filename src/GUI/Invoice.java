@@ -420,12 +420,7 @@ public class Invoice extends javax.swing.JFrame {
 
     private void btnPrintBillActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPrintBillActionPerformed
         
-        try {
-            txtAreaBill.print();
-        } catch (PrinterException ex) {
-            Logger.getLogger(Invoice.class.getName()).log(Level.SEVERE, null, ex);
-        }
-        
+        printBill();
     }//GEN-LAST:event_btnPrintBillActionPerformed
 
     private void btnViewBill1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnViewBill1ActionPerformed
@@ -519,6 +514,11 @@ public class Invoice extends javax.swing.JFrame {
     //Method to print the generate bill
     private void printBill(){
         
+        try {
+            txtAreaBill.print();
+        } catch (PrinterException ex) {
+            Logger.getLogger(Invoice.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
     
     private String treatmentAdjest(){
