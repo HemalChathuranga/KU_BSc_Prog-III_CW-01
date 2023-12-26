@@ -46,9 +46,9 @@ public class Login {
     //Method to create few user loging credentials to make system run
     private void createLogingList(){
         
+        useridAndPass.insert("Gayani", "Gayani@123");
         useridAndPass.insert("Hemal", "123");
-        useridAndPass.insert("Chathuranga", "456");
-        useridAndPass.insert("Hasani", "789");
+        useridAndPass.insert("admin", "admin");
     
     }
     
